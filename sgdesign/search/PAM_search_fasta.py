@@ -14,37 +14,41 @@ GENOME = sys.argv[1]
 ############################################################
 
 
-def live_fasta(fafile, OUT, log):
+def live_fasta(fafile, out, log):
     '''reads a fasta file into dict of strings'''
+    log = open(log, 'a')
+    out = open(out, 'a')
 
     # every 100,000 nt update the % completeness
     file_len = len(open(fafile).readlines())
-    live_write(['lines to read:', str(file_len)], log)
+    live_write(log, ['lines to read:', str(file_len)])
 
     cur_name = ''
     cur_seq = ''
     N = 0
 
     PAMheader = ['cas9.site', 'start', 'end', 'fragment', 'PAM', 'strand']
-    live_write([PAMheader], OUT+'_PAMs.tsv')
+    live_write(out, PAMheader)
 
-    with open(fafile, 'r') as file:
-        for line in file:
-            if line[0] == '>':
-                cur_name = line[1:].strip()
-                cur_seq = ''
-                N = 0
-            else:
-                cur_seq = cur_seq[-22:] + line.strip()
-                # no hit check, for speed
-                pams = live_sites(cur_seq, cur_name, N=N)
-                live_write(pams, OUT+'_PAMs.tsv')
-                N += len(line.strip())
+    for line in file:
+        if line[0] == '>':
+            cur_name = line[1:].strip()
+            cur_seq = ''
+            N = 0
+        else:
+            cur_seq = cur_seq[-22:] + line.strip()
+            # no hit check, for speed
+            pams = live_sites(cur_seq, cur_name, N=N)
+            
+            for pam in pams:
+                live_write(out, pam)
 
-            if (N % 100000) <= 80:
-                live_write([100*N/(file_len*len(line.strip())),
-                            '% complete'], log)
-                log.flush()
+            N += len(line.strip())
+
+        if (N % 100000) <= 80:
+            live_write([100*N/(file_len*len(line.strip())), '% complete'], log)
+            log.flush()
+
     return()
 
 
@@ -79,23 +83,20 @@ def live_sites(genome, name, N=0):
     return(PAMs)
 
 
-def live_write(tuple_list, filename):
-    '''add rows to end of tsv table'''
-    with open(filename, 'a') as file:
-        for row in tuple_list:
-            file.write('\t'.join([str(r) for r in row])+'\n')
+def live_write(out, row):
+    '''writes row to the end of output table'''
+    out.write('\t'.join([str(r) for r in row]) + '\n')
 
 
 ############################################################
 # RUN
 ############################################################
 
-OUT = GENOME.split('/')[-1].split('.')[0]
-if not os.path.exists(OUT):
-    os.mkdir(OUT)
+out = GENOME.split('/')[-1].split('.')[0]
+if not os.path.exists(out):
+    os.mkdir(out)
 
-log = open(OUT+'/log.PAM_search.txt', 'a')
+log = out + '/' + '/log.PAM_search.txt'
+out = out + '/' + 'PAMS_' + out + '.tsv
 
-live_write(['making file:', OUT+'/'+'PAMs_'+GENOME.split('/')[-1]], log)
-
-live_fasta(GENOME, OUT+'/'+OUT, log)
+live_fasta(GENOME, out, log)
