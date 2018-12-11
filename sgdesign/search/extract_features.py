@@ -78,6 +78,7 @@ def get_feature_seqs(fasta, features, outfile, chromosomes, log):
         if (i % 1000) == 0:
             live_write(log, [100*i/Lfeats, '% of features in chr. complete'])
             live_write(log, [j, 'bp processed in chr.'])
+            log.flush()
 
 
 def read_from_to(a, b, openfile, i):
@@ -226,6 +227,8 @@ if chromosomes and ('*' in GENOMEFASTA):
 
     for c in jobs:
         live_write(log, ['running chromosome', c, 'file:', clist[c]])
+        log.flush()
+
         cfeat = features[features['region.chromosome'].eq(c)]
         get_feature_seqs(clist[c], cfeat, OUTFILE, chromosomes, log)
 
