@@ -30,6 +30,7 @@ def live_fasta(fafile, out, log):
     PAMheader = ['cas9.site', 'start', 'end', 'fragment', 'PAM', 'strand']
     live_write(out, PAMheader)
 
+    file = open(fafile, 'r')
     for line in file:
         if line[0] == '>':
             cur_name = line[1:].strip()
@@ -39,7 +40,7 @@ def live_fasta(fafile, out, log):
             cur_seq = cur_seq[-22:] + line.strip()
             # no hit check, for speed
             pams = live_sites(cur_seq, cur_name, N=N)
-            
+
             for pam in pams:
                 live_write(out, pam)
 
@@ -97,6 +98,6 @@ if not os.path.exists(out):
     os.mkdir(out)
 
 log = out + '/' + '/log.PAM_search.txt'
-out = out + '/' + 'PAMS_' + out + '.tsv
+out = out + '/' + 'PAMS_' + out + '.tsv'
 
 live_fasta(GENOME, out, log)
