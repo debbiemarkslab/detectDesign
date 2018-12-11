@@ -44,6 +44,7 @@ def live_fasta(fafile, OUT, log):
             if (N % 100000) <= 80:
                 live_write([100*N/(file_len*len(line.strip())),
                             '% complete'], log)
+                log.flush()
     return()
 
 
