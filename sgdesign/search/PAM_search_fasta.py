@@ -6,22 +6,24 @@ import sys
 GENOME = sys.argv[1]
 
 ############################################################
-# Find all PAM sites
+# Find all PAM sites in a genome
 # we use a trick to minimize memory- by searching only
 # the current string, and directly outputing the results
 # INPUTS:
-# 1. Genome fasta (to search)
+# 1. Genome fasta
+# OUTPUTS:
+# 1. PAM site table
 ############################################################
 
 
 def live_fasta(fafile, out, log):
-    '''reads a fasta file into dict of strings'''
+    '''searches a fasta file for PAM sites, writing to a table'''
     log = open(log, 'a')
     out = open(out, 'a')
 
-    # every 100,000 nt update the % completeness
+    # record len in order to report % completeness
     file_len = len(open(fafile).readlines())
-    live_write(log, ['lines to read:', str(file_len)])
+    live_write(log, ['lines to read:', file_len])
 
     cur_name = ''
     cur_seq = ''
