@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import regex as re
 import numpy as np
 import sys
-import re
+
 from glob import iglob
 from copy import deepcopy
 
