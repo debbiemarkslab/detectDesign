@@ -1,0 +1,261 @@
+Name	Function
+accA	production of malonyl-CoA, the substrate for fatty acid biosynthesis
+accB	production of malonyl-CoA, the substrate for fatty acid biosynthesis
+accC	production of malonyl-CoA, the substrate for fatty acid biosynthesis
+accD	production of malonyl-CoA, the substrate for fatty acid biosynthesis
+acpA	fatty acid biosynthesis
+acpS	fatty acid biosynthesis
+adk	ADP formation
+alaS	translation
+alr	peptidoglycan biosynthesis
+argS	translation
+aroE	biosynthesis of aromatic amino acids
+aroF	biosynthesis of aromatic amino acids
+aroK	biosynthesis of aromatic amino acids
+asd	biosynthesis of threonine, lysine, dipicolic acid, peptidoglycan
+aspS	translation
+birA	regulation of biotin synthesis, addition of biotin to proteins
+cca	tRNA modification
+cdsA	biosynthesis of phospholipids
+cmk	synthesis of CTP and dCTP
+cysS	translation
+dapA	biosynthesis of lysine and peptidoglycan
+dapB	biosynthesis of lysine and peptidoglycan
+dapF	biosynthesis of lysine and peptidoglycan
+dapG	biosynthesis of lysine and peptidoglycan
+ddl	peptidoglycan precursor biosynthesis
+dfrA	biosynthesis of folate
+divIB	septum formation
+divIC	septum formation
+dnaA	DNA replication
+dnaB	DNA replication
+dnaC	DNA replication
+dnaD	DNA replication
+dnaE	DNA replication(lagging strand)
+dnaG	DNA replication
+dnaI	DNA replication
+dnaN	DNA replication, DNA repair
+dnaX	DNA replication
+dxs	biosynthesis of thiamine, MEP pathway of isoprenoid biosynthesis
+eno	enzyme in glycolysis/ gluconeogenesis
+era	ribosome assembly
+fabD	fatty acid biosynthesis
+fabF	fatty acid biosynthesis
+fabG	fatty acid biosynthesis
+ffh	presecretory protein translocation
+folB	biosynthesis of folate
+folC	biosynthesis of folate
+folE	biosynthesis of folate
+folK	biosynthesis of folate
+frr	translation
+ftsA	formation of Z-ring
+ftsL	septum formation
+ftsW	cell division
+ftsY	protein secretion
+ftsZ	formation of Z-ring
+fusA	translation
+gapA	catabolic enzyme in glycolysis
+gatA	translation
+gatB	translation
+gatC	translation
+gcaD	cell wall metabolism
+glmM	cell wall synthesis
+glmS	cell wall synthesis
+gltX	translation
+glyQ	translation
+glyS	translation
+gmk	GTP biosynthesis
+groEL	protein folding and re-folding
+groES	protein folding and re-folding
+gyrA	DNA supercoiling, control of replication initiation
+gyrB	DNA supercoiling, control of replication initiation
+hbs	DNA packaging, regulation of nucleoid compaction
+hisS	translation
+holA	DNA replication
+holB	DNA replication
+ileS	translation
+infA	translation
+infB	translation
+infC	translation
+ispC	MEP pathway of isoprenoid biosynthesis
+ispD	MEP pathway of isoprenoid biosynthesis
+ispE	MEP pathway of isoprenoid biosynthesis
+ispF	MEP pathway of isoprenoid biosynthesis
+ispG	MEP pathway of isoprenoid biosynthesis
+ispH	MEP pathway of isoprenoid biosynthesis
+leuS	translation
+ligA	replication
+lysS	translation
+mbl	cell shape determination
+menA	biosynthesis of menaquinone
+menB	biosynthesis of menaquinone
+menC	biosynthesis of menaquinone
+menD	biosynthesis of menaquinone
+menE	biosynthesis of menaquinone
+metK	S-adenosylmethionine synthesis
+metS	translation
+mgtE	magnesium uptake
+mnaA	biosynthesis of teichoic acid
+mraY	peptidoglycan precursor biosynthesis
+mreB	cell shape determination
+mreC	cell shape determation
+mreD	cell shape determation
+mrpA	sodium export
+mrpB	sodium export
+mrpC	sodium export
+mrpD	sodium export
+mrpE	sodium export
+mrpF	sodium export
+mrpG	sodium export
+murAA	peptidoglycan precursor biosynthesis
+murB	peptidoglycan precursor biosynthesis
+murC	peptidoglycan precursor biosynthesis
+murD	peptidoglycan precursor biosynthesis
+murE	peptidoglycan precursor biosynthesis
+murF	peptidoglycan precursor biosynthesis
+murG	peptidoglycan precursor biosynthesis
+nadD	NAD biosynthesis
+nadE	NAD biosynthesis
+nadF	generation of NADP from NAD
+nrdE	synthesis of deoxyribonucleoside triphosphates
+nrdF	synthesis of deoxyribonucleoside triphosphates
+nrdI	synthesis of deoxyribonucleoside triphosphates
+nusA	transcription
+obg	ribosome assembly, may be required to stimulate activity
+parC	chromosome segregation and compaction
+parE	chromosome segregation and compaction
+patA	biosynthesis of lysine and peptidoglycan
+pbpB	septation, cell division
+pcrA	plasmid rolling-circle replication, conjugative transfer of ICEBs1
+pgm	enzyme in glycolysis / gluconeogenesis
+pgsA	biosynthesis of phospholipids
+pheS	translation
+pheT	translation
+plsC	biosynthesis of phospholipids
+plsX	biosynthesis of phospholipids
+plsY	biosynthesis of phospholipids
+pncB	NAD salvage
+polC	DNA replication
+ppaC	recovery of phosphate ions from pyrophosphate
+prfA	translation
+prfB	translation
+priA	DNA replicationinitiation
+proS	translation
+prp	maturation of ribosomal protein L27
+prs	phosphoribosylpyrophosphate synthesis (biosynthesis of histidine)
+prsA	protein folding
+pyrG	pyrimidine biosynthesis
+pyrH	pyrimidine biosynthesis
+racE	peptidoglycan precursor biosynthesis
+rbgA	Ribosome assembly
+ribC	FAD biosynthesis
+rnc	processing and degradation of RNA molecules
+rnjA	RNA processing
+rnpA	cleavage of precursor sequences from the 5 ends of pre-tRNAs
+rnpB	cleavage of precursor sequences from the 5 ends of pre-tRNAs
+rnz	processing of CCA-less tRNA precursors
+rodA	control of cell shape and elongation
+rplB	translation
+rplC	translation
+rplD	translation
+rplE	translation
+rplF	translation
+rplJ	translation
+rplL	translation
+rplM	translation
+rplN	translation
+rplP	translation
+rplQ	translation
+rplR	translation
+rplS	translation
+rplT	translation
+rplU	translation
+rplV	translation
+rplX	translation
+rpmA	translation
+rpmD	translation
+rpoA	transcription
+rpoB	transcription
+rpoC	transcription
+rpsB	translation
+rpsC	translation
+rpsD	translation
+rpsE	translation
+rpsG	translation
+rpsH	translation
+rpsI	translation
+rpsJ	translation
+rpsK	translation
+rpsL	translation
+rpsM	translation
+rpsN	translation
+rpsO	translation
+rpsP	translation
+rpsQ	translation
+rpsR	translation
+rpsS	translation
+scpA	segregation of replication origins
+scr	presecretory protein translocation
+secA	protein secretion
+secE	protein secretion
+secY	protein secretion
+serS	translation
+sigA	transcription
+sknR	control of prophage gene expression
+smc	segregation of replication origins
+spoVC	spore coat formation
+ssbA	DNA replication, DNA repair/ recombination
+sufB	synthesis of iron-sulfur clusters
+sufC	synthesis of Fe-S clusters
+sufD	synthesis of Fe-S-clusters
+sufS	formation of iron-sulfur clusters in proteins
+sufU	transfer of sulfur from SufS to SufB
+sul	biosynthesis of folate
+tagA	biosynthesis of teichoic acid
+tagB	biosynthesis of teichoic acid
+tagD	biosynthesis of teichoic acid
+tagF	biosynthesis of teichoic acid
+tagG	Biosynthesis of teichoic acid
+tagH	Biosynthesis of teichoic acid
+tagO	biosynthesis of teichoic acid
+tilS	tRNA modification, control of ftsH expression
+tmk	TTP biosynthesis
+topA	relaxation of negatively supercoiled DNA behind RNA polymerase
+trmD	tRNA modification
+trmU	tRNA modification
+trpS	translation
+trxA	protection of proteins against oxidative damage
+trxB	keeps thioredoxin in the reduced state
+tsaB	tRNA modification
+tsaD	tRNA modification
+tsf	translation
+tuaB	biosynthesis of teichuronic acid
+tufA	translation
+tyrS	translation
+uppS	cell wall biosynthesis
+valS	translation
+walK	control of cell wall metabolism
+walR	control of cell wall metabolism
+wapI	intercellular competition
+xre	regulation of PBSX prophage gene expression
+ydiO	BsuM DNA modification
+ydiP	BsuM DNA modification
+yezG	inhibition of the cytotoxic activity of YeeF
+yhdL	control of SigM activity
+ykuQ	biosynthesis of lysine and peptidoglycan
+ykuR	biosynthesis of lysine and peptidoglycan
+ylaN	unknown
+ylbI	lipopolysaccharide biosynthesis
+yloI	biosynthesis of coenzyme A
+yneF	unknown
+yphC	ribosome assembly
+yqcF	inhibition of the cytotoxic activity of YqcG
+yqeG	unknown
+yqfG	16S rRNA maturation
+yrvO	tRNA modification
+ysxC	ribosome assembly
+ytaG	synthesis of coenzyme A
+yumC	redox reactions that involve ferredoxin and flavodoxin
+ywpB	fatty acid biosynthesis
+yxlC	control of SigY activity
+yxxD	inhibition of the cytotoxic activity of YxiD
