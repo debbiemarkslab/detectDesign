@@ -1,0 +1,32 @@
+LOCUS       CRE recombinase         1026 bp    DNA     linear   UNA 04-FEB-2020
+DEFINITION  Expresses Cre recombinase protein in bacterial cells.
+ACCESSION
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct.
+FEATURES             Location/Qualifiers
+     source          <1..>1026
+                     /organism="synthetic DNA construct"
+                     /mol_type="other DNA"
+                     /label="source synthetic DNA construct"
+ORIGIN      
+        1 tccaacctgc tgacggtgca ccagaatctg ccggcactgc cggtcgatgc aaccagtgac
+       61 gaagtgcgca aaaatctgat ggatatgttt cgtgaccgcc aagccttcag cgaacatacg
+      121 tggaaaatgc tgctgtcggt ttgccgtagc tgggcggcct ggtgtaaact gaacaatcgc
+      181 aaatggtttc cggcagaacc ggaagatgtg cgtgactatc tgctgtacct gcaggcacgt
+      241 ggtctggcag ttaaaaccat ccagcaacat ctgggccaac tgaacatgct gcaccgtcgc
+      301 tctggtctgc cgcgtccgag tgattccaat gccgtcagtc tggtgatgcg tcgcattcgt
+      361 aaagaaaacg tggatgcagg cgaacgcgct aaacaggcac tggcttttga acgtaccgat
+      421 ttcgaccaag ttcgctctct gatggaaaac agtgatcgtt gccaggacat ccgcaatctg
+      481 gcattcctgg gtattgctta taacaccctg ctgcgcattg cagaaatcgc tcgtattcgc
+      541 gtgaaagata tcagccgtac ggacggcggt cgcatgctga ttcacatcgg ccgtaccaaa
+      601 acgctggttt ccaccgcggg cgtcgaaaaa gccctgtcac tgggtgtcac gaaactggtg
+      661 gaacgctgga tttcagtttc gggcgtcgca gatgacccga acaattacct gttttgtcgt
+      721 gtgcgcaaaa atggtgttgc agctccgagc gctacctctc agctgagtac gcgtgcgctg
+      781 gaaggcatct tcgaagccac ccatcgcctg atttatggcg cgaaagatga cagcggtcag
+      841 cgttacctgg catggtccgg tcactcagct cgtgttggtg cagcacgtga tatggcacgt
+      901 gcaggtgtct ctatcccgga aattatgcag gccggcggtt ggacgaacgt gaatattgtt
+      961 atgaactata ttcgtaacct ggactctgaa acgggtgcga tggtgcgtct gctggaagat
+     1021 ggcgac
+//
