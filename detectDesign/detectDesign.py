@@ -1,4 +1,7 @@
-# Last updated 02/13/2020
+# Last updated 02/20/2020
+# Last modified
+#   Update .get_value() to .at[] for version change
+#   From find_target_pairs removed PAIR_EXACT and PAIR_DIST
 # Last added
 #   import literal_eval
 #   convert_to_strand(x)
@@ -274,7 +277,7 @@ def pair_sites(sites, max_dist=200, min_dist=23, pos="Start", gen="Genome"):
 
     for i in coords.index:
         nearby.append(curr)
-        curr = (i, coords[pos].get_value(i), coords[gen].get_value(i))
+        curr = (i, coords.at[i, pos], coords.at[i, gen])
 
         for k, vs in enumerate(nearby[::-1]):
             pair_dist = curr[1] - vs[1]
@@ -290,17 +293,16 @@ def pair_sites(sites, max_dist=200, min_dist=23, pos="Start", gen="Genome"):
     return extract_pairs(pairs, sites)
 
 
-def find_target_pairs(target_sites, TARGET_NAME, MAX_DIST, MIN_DIST, PAIR_EXACT, PAIR_DIST, TARGET_REGION=False, PAIR_SHARE_STRAND=True, TARGET_CSV=False, OUTPUT_FOLDER='.'):
+def find_target_pairs(target_sites, TARGET_NAME, MAX_DIST, MIN_DIST, TARGET_REGION=False, PAIR_SHARE_STRAND=True, TARGET_CSV=False, OUTPUT_FOLDER='.'):
     '''Find the target pairs with NGG pam, implicit with 'NGG' in target_sites'''
     target_pairs = pair_sites(target_sites, MAX_DIST, MIN_DIST)
+    if len(target_pairs) <= 0:
+        return []
 
     target_pairs.loc[:, 'Pair_Dist'] = np.abs(target_pairs['Start_2'] - target_pairs['Start_1'])
     target_pairs.loc[:, 'Shared_Strand'] = (target_pairs['Strand_2'] == target_pairs['Strand_1'])
 
-    if PAIR_EXACT == False:
-        dist_cond = target_pairs.Pair_Dist.between(MIN_DIST, MAX_DIST)
-    else:
-        dist_cond = target_pairs.Pair_Dist == PAIR_DIST
+    dist_cond = target_pairs.Pair_Dist.between(MIN_DIST, MAX_DIST)
     
     candidate_table = target_pairs[(dist_cond) & (target_pairs.Shared_Strand == PAIR_SHARE_STRAND)]
     
@@ -477,11 +479,11 @@ def find_hamming(
     scores = []
     for i in guides.index:
         score = deepcopy(search_sites)
-        target = guides["One_Hot"].get_value(i)
+        target = guides.at[i, "One_Hot"]
         score.loc[:, "Full_Mism"] = np.count_nonzero(np.stack(score["One_Hot"].to_numpy()) - target, axis=1) / 2
         score.loc[:, "Seed_Mism"] = np.count_nonzero(np.stack(score["Seed_One_Hot"].to_numpy()) - target[-one_hot_seed_size:], axis=1) / 2
         score = score.drop(columns=["One_Hot"])
-        scores.append(score.assign(Target_Guide=guides["Guide"].get_value(i)))
+        scores.append(score.assign(Target_Guide=guides.at[i, "Guide"]))
 
     scores = pd.concat(scores).reset_index(drop=True)
     scores = scores[scores['Full_Mism'].le(hamming_max)]
