@@ -1,0 +1,5 @@
+matplotlib==3.0.3
+numpy==1.17.3
+pandas==1.0.1 
+seaborn==0.8.1
+regex==2018.8.29
