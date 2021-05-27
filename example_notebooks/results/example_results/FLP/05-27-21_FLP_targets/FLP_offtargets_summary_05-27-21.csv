@@ -1,0 +1,16 @@
+,Pair_idx,Genome,Guide1,Guide2,Prox_5Seed,Prox_8Seed,Seed_Mism0,Seed_Mism1,Seed_Mism2,Full_Mism0,Full_Mism3,Full_Mism4
+0,2,B_sub,tcaatctttgctataaaaaa,tctttcaatgaagggcctaa,423,1,89,1001,7391,0,0,1
+1,2,FLP,tcaatctttgctataaaaaa,tctttcaatgaagggcctaa,1,1,2,0,0,2,0,0
+2,2,F_tula,tcaatctttgctataaaaaa,tctttcaatgaagggcctaa,62,0,28,292,1873,0,0,0
+3,3,B_sub,aatggcccaaaatctcacat,aacggagttgactaatgttg,18,0,3,255,3072,0,1,0
+4,3,FLP,aatggcccaaaatctcacat,aacggagttgactaatgttg,1,1,2,0,0,2,0,0
+5,3,F_tula,aatggcccaaaatctcacat,aacggagttgactaatgttg,8,0,4,113,1191,0,0,0
+6,5,B_sub,gaagcatacgataccccgca,ggatgagactaatccaattg,27,0,7,198,2316,0,0,1
+7,5,FLP,gaagcatacgataccccgca,ggatgagactaatccaattg,1,1,2,1,2,2,0,0
+8,5,F_tula,gaagcatacgataccccgca,ggatgagactaatccaattg,4,0,1,42,482,0,0,0
+9,6,B_sub,agactaatccaattgaggag,atacgataccccgcatggaa,34,0,25,334,3400,0,0,0
+10,6,FLP,agactaatccaattgaggag,atacgataccccgcatggaa,1,1,2,0,2,2,0,0
+11,6,F_tula,agactaatccaattgaggag,atacgataccccgcatggaa,0,0,2,40,515,0,0,0
+12,7,B_sub,atattatcccattccatgcg,atatgctgccactcctcaat,31,0,8,243,2605,0,0,0
+13,7,FLP,atattatcccattccatgcg,atatgctgccactcctcaat,1,1,2,0,0,2,0,0
+14,7,F_tula,atattatcccattccatgcg,atatgctgccactcctcaat,6,0,3,63,563,0,0,1

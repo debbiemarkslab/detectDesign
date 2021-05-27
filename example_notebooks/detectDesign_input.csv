@@ -1,5 +1,3 @@
 ﻿Target_Genome,Genome_Name,Target_Name,Range,Offtarget_Folder,Pair_Dist
-./genomes/ontargets/CRE recombinase.gb,CRE_rec,CRE_rec,,./genomes/offtargets/,62
-./genomes/ontargets/FLP.gb,FLP,FLP,,./genomes/offtargets/,62
-./genomes/ontargets/ori R6K (from pCAH63).gb,ori_R6K,ori_R6K,,./genomes/offtargets/,62
 ./genomes/ontargets/YFP (pEB112).gb,YFP,YFP,,./genomes/offtargets/,62
+./genomes/ontargets/FLP.gb,FLP,FLP,,./genomes/offtargets/,62

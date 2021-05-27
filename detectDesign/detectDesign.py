@@ -1,17 +1,3 @@
-<<<<<<< Updated upstream
-# Last updated 02/20/2020
-# Last modified
-#   Update .get_value() to .at[] for version change
-#   From find_target_pairs removed PAIR_EXACT and PAIR_DIST
-# Last added
-#   import literal_eval
-#   convert_to_strand(x)
-#   get_mism_counts(off_targets, target_col, full_col, seed_col)
-#   side_by_side_bar(xys, titles=None ,fig=None, ax=None, space=0.15, ticks=None)
-#   find_proximal_perpair(offtargets_pd, MAX_DIST, MIN_DIST)
-#   zip_values(spread_pd, col_cut, indices=[])
-#   expand_list_to_cols(df, col, nan=None, fix_int=False)
-=======
 # Last updated 05/27/2021
 # Last modified
 #   
@@ -31,8 +17,6 @@
 #       TARGET_INPUT_FILE, previous_genome_folder, total_candidate_table, 
 #       target_col, full_col, seed_col):
 
->>>>>>> Stashed changes
-
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
@@ -43,10 +27,7 @@ import numpy as np
 import datetime
 import unittest
 import sys
-<<<<<<< Updated upstream
-=======
 import os
->>>>>>> Stashed changes
 
 from collections import Counter
 from ast import literal_eval
@@ -538,10 +519,6 @@ def get_mism_counts(off_targets, target_col, full_col, seed_col):
 
     counts_pd = pd.DataFrame(counts_table, columns=['Pair_idx', 'Genome', 'Guide', 'Full_Mism', 'Seed_Mism'])
     return counts_pd
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 # 5. tabulated outputs and plots ######################################################
 
@@ -645,7 +622,7 @@ def detectDesign_pipeline(PAIR_SHARE_STRAND, INCLUDE_TARGET, HAMMING_MAX, SEED_S
                 curr_offtarget_folder)
             
             # Load in off-target genome(s)
-        if previous_genome_folder != curr_offtarget_folder:
+
             # Collect all the off-target genome sites
             offtarget_sites_list = [] 
             for curr_file in iglob(curr_offtarget_folder + '*'):
@@ -850,33 +827,33 @@ def detectDesign_pipeline(PAIR_SHARE_STRAND, INCLUDE_TARGET, HAMMING_MAX, SEED_S
                         plt.bar(s_pos, data_s, align='center', alpha=0.75)
                         name_s = '\n Proximal perfect seed counts per pair in ' + str(curr_genome) + ' for ' + str(curr_name) + '\n Seed ' + str(
                             SMALLSEED_SIZE) + 'bp match: ' + str(SMALLSEED_MAX) + ', Dist: [' + str(PROXIMAL_MIN) + ',' + str(PROXIMAL_MAX) + ']'
-                    else:
-                        print(
-                            'Empty proximal counts, small seed ' +
-                            str(SMALLSEED_SIZE) +
-                            ' in ' +
-                            str(curr_genome))
-                        continue
-
-                    # If any, plot the large seed proximal matches
-                    if len(total_proximal_pd) > 0:
-                        curr_total_proximal_pd = total_proximal_pd[total_proximal_pd['Genome_1'] == curr_genome]
-                        if len(curr_total_proximal_pd) > 0:
-                            # Fill any missing data with zeros, carry through
-                            # filled data
-                            y = curr_total_proximal_pd.groupby(['Pair_idx_1'])
-                            data_y_pd = y.count()[['Start_1']].reset_index()
-                            fill_zeros = set(
-                                objects) - set(curr_total_proximal_pd['Pair_idx_1'])
-                            zeros_pd = pd.DataFrame(
-                                list(zip(fill_zeros, [0] * len(fill_zeros))), columns=['Pair_idx_1', 'Start_1'])
-                            data_y_pd = data_y_pd.append(
-                                zeros_pd).sort_values('Pair_idx_1')
-                            # Save ordered and filled data
-                            data_y = list(data_y_pd['Start_1'])
-                            # width:s_pos/2, height:3
-                            plt.figure(figsize=(len(s_pos) / 2, 3))
-                            plt.bar(s_pos, data_y, align='center', alpha=0.75)
+                    
+                        # If any, plot the large seed proximal matches
+                        if len(total_proximal_pd) > 0:
+                            curr_total_proximal_pd = total_proximal_pd[total_proximal_pd['Genome_1'] == curr_genome]
+                            if len(curr_total_proximal_pd) > 0:
+                                # Fill any missing data with zeros, carry through
+                                # filled data
+                                y = curr_total_proximal_pd.groupby(['Pair_idx_1'])
+                                print(y)
+                                data_y_pd = y.count()[['Start_1']].reset_index()
+                                fill_zeros = set(
+                                    objects) - set(curr_total_proximal_pd['Pair_idx_1'])
+                                zeros_pd = pd.DataFrame(
+                                    list(zip(fill_zeros, [0] * len(fill_zeros))), columns=['Pair_idx_1', 'Start_1'])
+                                data_y_pd = data_y_pd.append(
+                                    zeros_pd).sort_values('Pair_idx_1')
+                                # Save ordered and filled data
+                                data_y = list(data_y_pd['Start_1'])
+                                # width:s_pos/2, height:3
+                                print(data_y)
+                                plt.bar(s_pos, data_y, align='center', alpha=0.75)
+                            else:
+                                print(
+                                    'Empty proximal counts ' +
+                                    str(SEED_SIZE) +
+                                    ' seed in ' +
+                                    str(curr_genome))
                         else:
                             print(
                                 'Empty proximal counts ' +
@@ -885,10 +862,13 @@ def detectDesign_pipeline(PAIR_SHARE_STRAND, INCLUDE_TARGET, HAMMING_MAX, SEED_S
                                 str(curr_genome))
                     else:
                         print(
-                            'Empty proximal counts ' +
-                            str(SEED_SIZE) +
-                            ' seed in ' +
+                            'Empty proximal counts, small seed ' +
+                            str(SMALLSEED_SIZE) +
+                            ' in ' +
                             str(curr_genome))
+                        continue
+
+                    
 
                     plt.xticks(s_pos, objects)
                     plt.ylabel('Counts')
@@ -955,7 +935,6 @@ def detectDesign_pipeline(PAIR_SHARE_STRAND, INCLUDE_TARGET, HAMMING_MAX, SEED_S
                     0).astype(int)
                 pair_table_pd[counts_total_cols].to_csv(
                     COUNTS_PAIR_SUMMARY_OUTFILE)
-
 
 
 if __name__ == "__main__":
