@@ -23,19 +23,19 @@ Get filezilla: https://filezilla-project.org/
 Host info: https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer
 
 ##### Open interactive node (8G was good for setting up the env)
-'srun --pty -p interactive --mem 8G -t 0-06:00 /bin/bash'
+`srun --pty -p interactive --mem 8G -t 0-06:00 /bin/bash`
 
 ##### Load conda package to use package manager commands
-'module load conda2'
+`module load conda2`
 
 ##### Creates a conda environment that has the packages necessary (skip if done before)
-'conda create -n detectDesign-env-04_07_2021 python=3.7 matplotlib==3.0.3 seaborn==0.8.1 pandas==1.0.1 regex==2018.8.29 numpy==1.17.3'
+`conda create -n detectDesign-env-04_07_2021 python=3.7 matplotlib==3.0.3 seaborn==0.8.1 pandas==1.0.1 regex==2018.8.29 numpy==1.17.3`
 
 ##### Activate the conda environment
-'conda activate detectDesign-env-04_07_2021'
+`conda activate detectDesign-env-04_07_2021`
 
 ##### Add permissions to execute, read, and write.
-'chmod 777 ./run_detectDesign.py'
+`chmod 777 ./run_detectDesign.py`
 
 ##### Run the module 
-'sbatch -p short -t 0-04:00:00 --mem 32000MB -o detectDesign_%j.out -e detectDesign_err_%j.err --wrap="./run_detectDesign.py"''
+`sbatch -p short -t 0-04:00:00 --mem 32000MB -o detectDesign_%j.out -e detectDesign_err_%j.err --wrap="./run_detectDesign.py"`
