@@ -1,3 +1,5 @@
 ﻿Target_Genome,Genome_Name,Target_Name,Range,Offtarget_Folder,Pair_Dist
-./genomes/ontargets/Ftula_LVS_genomic.fa,F_tula,F.TN,"[678,1078]",./genomes/offtargets/,"[58,66]"
-./genomes/ontargets/Ftula_LVS_genomic.fa,F_tula,F.TNH,"[436394,436794]",./genomes/offtargets/,62
+./genomes/ontargets/CRE recombinase.gb,CRE_rec,CRE_rec,,./genomes/offtargets/,62
+./genomes/ontargets/FLP.gb,FLP,FLP,,./genomes/offtargets/,62
+./genomes/ontargets/ori R6K (from pCAH63).gb,ori_R6K,ori_R6K,,./genomes/offtargets/,62
+./genomes/ontargets/YFP (pEB112).gb,YFP,YFP,,./genomes/offtargets/,62

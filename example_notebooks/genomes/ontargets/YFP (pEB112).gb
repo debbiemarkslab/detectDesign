@@ -1,0 +1,50 @@
+LOCUS       YFP (pEB112)             714 bp    DNA     linear   UNA 04-FEB-2020
+DEFINITION  pEB45 with yfpA206K.
+ACCESSION   pEB112
+KEYWORDS    .
+SOURCE      Unknown (Unknown.)
+  ORGANISM  Unknown
+            Unclassified.
+FEATURES             Location/Qualifiers
+     CDS             1..714
+                     /gene="yfpA206K"
+                     /SECDrawAs="Gene"
+                     /label="yfpA206K CDS"
+     misc_difference 190..216
+                     /created_by="christine"
+                     /label="differences"
+     misc_difference 286..288
+                     /created_by="christine"
+                     /modified_by="christine"
+                     /label="R>C abolishes fluorescence"
+     misc_difference 437..438
+                     /created_by="christine"
+                     /label="2 nt difference"
+     misc_difference 458..459
+                     /created_by="christine"
+                     /label="2 nt difference"
+     misc_difference 488..492
+                     /created_by="christine"
+                     /modified_by="christine"
+                     /label="differences"
+     misc_difference 607..609
+                     /created_by="christine"
+                     /label="3 nt difference"
+     misc_difference 613..615
+                     /created_by="christine"
+                     /modified_by="christine"
+                     /label="S>F abolishes fluorescence"
+ORIGIN      
+        1 atgcgtaaag gagaagaact tttcactgga gttgtcccaa ttcttgttga attagatggt
+       61 gatgttaatg ggcacaaatt ttctgtcagt ggagagggtg aaggtgatgc aacatacgga
+      121 aaacttaccc ttaaatttat ttgcactact ggaaaactac ctgttccatg gccaacactt
+      181 gtcactactt tcggttatgg tctaaaatgc tttgctagat acccagatca tatgaaacgg
+      241 catgactttt tcaagagtgc catgcccgaa ggttatgtac aggaaagaac tatatttttc
+      301 aaagatgacg ggaactacaa gacacgtgct gaagtcaagt ttgaaggtga tacccttgtt
+      361 aatagaatcg agttaaaagg tattgatttt aaagaagatg gaaacattct tggacacaaa
+      421 ttggaataca actataactc acacaatgta tacatcatgg cagacaaaca aaagaatgga
+      481 atcaaagtta acttcaaaat tagacacaac attgaagatg gaagcgttca actagcagac
+      541 cattatcaac aaaatactcc aattggcgat ggccctgtcc ttttaccaga caaccattac
+      601 ctgtcctatc aatctaaact ttcgaaagat cccaacgaaa agagagacca catggtcctt
+      661 cttgagtttg taacagctgc tgggattaca catggcatgg atgaactata caaa
+//

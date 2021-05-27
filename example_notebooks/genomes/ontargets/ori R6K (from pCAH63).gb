@@ -1,0 +1,21 @@
+LOCUS       ori R6K (from pC         389 bp    DNA     linear   UNA 04-FEB-2020
+DEFINITION  CRIM plasmid pCAH63, complete sequence.
+ACCESSION   urn.local...e7-biuvaxc
+VERSION     urn.local...e7-biuvaxc
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+FEATURES             Location/Qualifiers
+     rep_origin      1..389
+                     /created_by="christine"
+                     /modified_by="christine"
+                     /label="ori R6K"
+ORIGIN      
+        1 gatctgaaga tcagcagttc aacctgttga tagtacgtac taagctctca tgtttcacgt
+       61 actaagctct catgtttaac gtactaagct ctcatgttta acgaactaaa ccctcatggc
+      121 taacgtacta agctctcatg gctaacgtac taagctctca tgtttcacgt actaagctct
+      181 catgtttgaa caataaaatt aatataaatc agcaacttaa atagcctcta aggttttaag
+      241 ttttataaga aaaaaaagaa tatataaggc ttttaaagct tttaaggttt aacggttgtg
+      301 gacaacaagc cagggatgta acgcactgag aagcccttag agcctctcaa agcaattttg
+      361 agtgacacag gaacacttaa cggctgaca
+//
